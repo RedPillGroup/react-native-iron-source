@@ -130,7 +130,7 @@ public class RNIronSourceRewardedVideoModule extends ReactContextBaseJavaModule 
 
     @ReactMethod
     public void isRewardedVideoPlacementCapped(final String placementName) {
-        Log.d(TAG, "showRewardedVideo() called!!");
+        Log.d(TAG, "isRewardedVideoPlacementCapped() called!!");
         IronSource.isRewardedVideoPlacementCapped(placementName);
     }
 
