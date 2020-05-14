@@ -64,7 +64,7 @@ RCT_EXPORT_METHOD(showRewardedVideo:(NSString*)placementName)
     }
 }
 
-RCT_EXPORT_METHOD(isRewardedVideoCappedForPlacement:(NSString*)placementName)
+RCT_EXPORT_METHOD(isRewardedVideoPlacementCapped:(NSString*)placementName)
 {
     [IronSource isRewardedVideoCappedForPlacement:@"Placement"];
 }
