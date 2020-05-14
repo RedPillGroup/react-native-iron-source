@@ -81,7 +81,6 @@ public class RNIronSourceRewardedVideoModule extends ReactContextBaseJavaModule 
                 public void onRewardedVideoAdClicked(Placement placement) {
                     Log.d(TAG, "onRewardedVideoAdClicked() called!");
                 }
-
                 /*
                  * Note: the events below are not available for
                  * all supported Rewarded Video Ad Networks.
@@ -127,11 +126,6 @@ public class RNIronSourceRewardedVideoModule extends ReactContextBaseJavaModule 
                 }
             }
         });
-    }
-
-    @ReactMethod
-    public void isRewardedVideoPlacementCapped(final String placementName) {
-        IronSource.isRewardedVideoPlacementCapped(null);
     }
 
     @ReactMethod
