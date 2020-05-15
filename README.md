@@ -329,6 +329,21 @@ IronSourceRewardedVideo.isRewardedVideoAvailable().then((available) => {
 });
 ```
 
+### IronSourceRewardedVideo.isRewardedVideoPlacementCapped
+Check if a reward video placement is capped.
+Return a boolean.
+
+```javascript
+  async isRewardedVideoPlacementCapped(placementName) {
+    try {
+      return await IronSourceRewardedVideo.isRewardedVideoPlacementCapped(placementName);
+    }
+    catch (e) {
+      console.error('isRewardedVideoPlacementCapped failed: ', e);
+    }
+  }
+```
+
 ## Events
 
 ### Banner events
