@@ -329,9 +329,10 @@ IronSourceRewardedVideo.isRewardedVideoAvailable().then((available) => {
 });
 ```
 
-### IronSourceRewardedVideo.isRewardedVideoPlacementCapped
+### IronSourceRewardedVideo.isRewardedVideoPlacementCapped(PlacementName)
 Check if a reward video placement is capped.
-Return a boolean.
+Take a string corresponding to the placement desired and return a boolean.
+If a wrong placement name is given, the function is applied to the default placement configured.
 
 ```javascript
   async isRewardedVideoPlacementCapped(placementName) {
