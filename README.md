@@ -336,7 +336,7 @@ Return a boolean.
 ```javascript
   async isRewardedVideoPlacementCapped(placementName) {
     try {
-      return await IronSourceRewardedVideo.isRewardedVideoPlacementCapped(placementName);
+      return IronSourceRewardedVideo.isRewardedVideoPlacementCapped(placementName);
     }
     catch (e) {
       console.error('isRewardedVideoPlacementCapped failed: ', e);
