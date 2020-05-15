@@ -129,9 +129,15 @@ public class RNIronSourceRewardedVideoModule extends ReactContextBaseJavaModule 
     }
 
     @ReactMethod
-    public void isRewardedVideoPlacementCapped(final String placementName) {
+    public void isRewardedVideoPlacementCapped(final String placementName, Promise promise) {
+      try {
         Log.d(TAG, "isRewardedVideoPlacementCapped() called!!");
-        IronSource.isRewardedVideoPlacementCapped(placementName);
+        promise.resolve(IronSource.isRewardedVideoPlacementCapped(placementName));
+      }
+      catch (Exception e) {
+        Log.d(TAG, "isRewardedVideoPlacementCapped error %s", e);
+        promise.reject("isRewardedVideoPlacementCapped, Error, " + e);
+      }
     }
 
     @ReactMethod

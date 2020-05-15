@@ -64,9 +64,15 @@ RCT_EXPORT_METHOD(showRewardedVideo:(NSString*)placementName)
     }
 }
 
-RCT_EXPORT_METHOD(isRewardedVideoPlacementCapped:(NSString*)placementName)
+RCT_EXPORT_METHOD(isRewardedVideoPlacementCapped:(NSString*)placementName) (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
-    [IronSource isRewardedVideoCappedForPlacement:@"Placement"];
+    @try {
+        resolve(@([IronSource isRewardedVideoCappedForPlacement:@"Placement"]));
+    }
+    @catch (NSException *exception) {
+        NSLog(@"isRewardedVideoCappedForPlacement, Error, %@", exception.reason);
+        reject(@"isRewardedVideoCappedForPlacement, Error, %@", exception.reason, nil);
+    }
 }
 
 RCT_EXPORT_METHOD(isRewardedVideoAvailable:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
