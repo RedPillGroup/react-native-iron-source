@@ -64,7 +64,7 @@ RCT_EXPORT_METHOD(showRewardedVideo:(NSString*)placementName)
     }
 }
 
-RCT_EXPORT_METHOD(isRewardedVideoPlacementCapped:(NSString*)placementName) (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(isRewardedVideoPlacementCapped:(NSString*)placementName : (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
     @try {
         resolve(@([IronSource isRewardedVideoCappedForPlacement:@"Placement"]));
