@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     ss.source_files  = "ios/**/*.{h,m}"
   end
   s.subspec "AdColony" do |ss|
-    ss.dependency         "IronSourceAdColonyAdapter", "4.1.5.3"
+    ss.dependency         "IronSourceAdColonyAdapter", "> 1"
   end
   s.subspec "Admob" do |ss|
     ss.dependency         "IronSourceAdMobAdapter", "> 1"
@@ -32,13 +32,13 @@ Pod::Spec.new do |s|
     ss.dependency         "IronSourceAmazonAdapter", "> 1"
   end
   s.subspec "AppLovin" do |ss|
-    ss.dependency         "IronSourceAppLovinAdapter", "4.3.3.4"
+    ss.dependency         "IronSourceAppLovinAdapter", "> 1"
   end
   s.subspec "Chartboost" do |ss|
     ss.dependency         "IronSourceChartboostAdapter", "> 1"
   end
   s.subspec "Facebook" do |ss|
-    ss.dependency         "IronSourceFacebookAdapter", "4.3.4.4"
+    ss.dependency         "IronSourceFacebookAdapter", "> 1"
   end
   s.subspec "Fyber" do |ss|
     ss.dependency         "IronSourceFyberAdapter", "> 1"
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
     ss.dependency         "IronSourceUnityAdsAdapter", "> 1"
   end
   s.subspec "Vungle" do |ss|
-    ss.dependency         "IronSourceVungleAdapter", "4.1.6.4"
+    ss.dependency         "IronSourceVungleAdapter", "> 1"
   end
 
   if defined?($RNIronSourceAsStaticFramework)
