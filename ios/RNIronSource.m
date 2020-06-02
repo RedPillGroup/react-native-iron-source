@@ -20,7 +20,7 @@ RCT_EXPORT_METHOD(initializeIronSource:(NSString *)appId
 {
     NSLog(@"initializeIronSource called!! with key %@ and user id %@", appId, userId);
     [IronSource setUserId:userId];
-    [IronSource initWithAppKey:appId];
+    [IronSource initWithAppKey:appId adUnits:@[IS_REWARDED_VIDEO]];
 
     BOOL validateIntegration = [RCTConvert BOOL:options[@"validateIntegration"]];
     if (validateIntegration) {
